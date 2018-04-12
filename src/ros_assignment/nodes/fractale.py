@@ -15,7 +15,7 @@ def message():
     print('************************************')
 
 #Hexagonal fractale with red color
-def fractale1(angle):
+def fractale1(angle,f1):
     #TODO here
     color = angle + 1
     red = 200.0
@@ -23,12 +23,12 @@ def fractale1(angle):
     green = (50*color)//255
     turtle1_set_pen(red,blue,green,color//5,0)
     if angle > 0:
-        turtle1_teleport_relative(3,0)
+        turtle1_teleport_relative(f1,0)
         turtle1_teleport_relative(0,1)
-        fractale1(angle - 1)
+        fractale1(angle - 1,f1)
 
 #Triangular fractale with blue color
-def fractale2(angle):
+def fractale2(angle,f2):
     #TODO here
     color = angle + 1
     red = (200.0/color)//255
@@ -36,18 +36,29 @@ def fractale2(angle):
     green = 250
     turtle1_set_pen(red,blue,green,color//5,0)
     if angle > 0:
-        turtle1_teleport_relative(3,0)
+        turtle1_teleport_relative(f2,0)
         turtle1_teleport_relative(0,2)
-        fractale2(angle - 1)
+        fractale2(angle - 1,f2)
 
 #combination of Hexagonal and Triangular fractals with depth argument
-def fractale3(depth):
+def fractale3(depth,f1,f2):
     #TODO here
     if depth > 0:
-        fractale1(16)
-        fractale2(6)
-        fractale3(depth - 1)
+        fractale1(16,f1)
+        fractale2(6,f2)
+        fractale3(depth - 1,f1,f2)
 
+#recursive depth( True fractale)
+def fractale(loc,size,split):
+    if loc > 0 :
+        fractale3(10,size,size)
+        #turtle1_teleport_absolute(7-(loc*2),7-(loc*2),0)
+        if split == 1:
+            turtle1_teleport_relative(-loc,0.5)
+        else:
+            turtle1_teleport_relative(loc*2,0.5)
+        fractale(loc - 1, size-1,0)
+        fractale(loc, size,1)
 #Intitalizer function
 def init():
     global turtle1_set_pen,turtle1_teleport_absolute,turtle1_teleport_relative,clear_background
@@ -66,5 +77,5 @@ if __name__ == '__main__':
     try:
         message()
         init()
-        fractale3(10)
+        fractale(4,3,1)
     except rospy.ROSInterruptException: pass
