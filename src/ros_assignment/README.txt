@@ -28,7 +28,7 @@ roslaunch ros_assignment chase.launch
 
 #5. Create GUI Application to drive turtle.
 # Run GUI controlled turtle simulation by typing the following command
-roslaunch ros_assignment gui.launch
+rosrun ros_assignment GUI_controller.py 
 
 ************************************************
 ************************************************
