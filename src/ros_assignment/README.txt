@@ -28,7 +28,7 @@ roslaunch ros_assignment chase.launch
 
 #5. Create GUI Application to drive turtle.
 # Run GUI controlled turtle simulation by typing the following command
-rosrun ros_assignment GUI_controller.py 
+rosrun ros_assignment GUI_controller.py
 
 ************************************************
 ************************************************
@@ -38,18 +38,21 @@ rosrun ros_assignment GUI_controller.py
 ***********DETAIL USAGE AFTER LAUNCH************
 ************************************************
           ****Picture Converting****
-1. Grayscale image will be displayed on the right with webcam image on the left.
-2.
+1. With in 2 seconds of running image.launch, your picture will be taken by webcam.
+2. Grayscale image will be displayed on the right with webcam image on the left.
           ****Fractale****
 1. After lauching 'fractale.launch', press "CTRL+C" to close or end simulation.
-2. Press <up>,<down>,<left> or <right> to change color.
+2. Wait for the process to finish.
           ****Blender****
-1. After launching 'blender.launch', Blender and turtlesim will open.
-2. Drag the object in blender window in the x-axis(Green line) to move the turtle.
-3. Drag the object in blender window in the z-axis(Blue line) to rotate the turtle.
-4. Drag the object in blender window in the all-axis to move and rotate the turtle.
+1. After launching 'blender.launch' and opening ros_blender.blend, Blender and Turtlesim will open.
+2. Move the object in blender window in the xy-axis('W' or 'S' key) to move the turtle.
+3. Rotate the object in blender window in the z-axis('A' or 'D' key) to rotate the turtle.
+4. Move the object in blender window in the all-axis to move and rotate the turtle.
+5. NOTE to press 'P' key in the 3D model window.
           ****Turtle Chase****
-1. After launching 'chase.launch', a
+1. After launching 'chase.launch', a turtlesim with two turtles will appear.
+2. On the terminal window you launched the file, use arrow keys to move turtle1.
+3. Turtle2 will follow turtle1.
           ****GUI****
 1. Clicking the button "Random" will make the turtlesim move at a random spped and direction.
 2. Clicking the button "Stop" will freeze the turtlesim in the pose when the button was press.
