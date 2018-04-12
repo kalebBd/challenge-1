@@ -18,6 +18,9 @@ roslaunch ros_assignment fractale.launch
 #3. Communicate messages between ROS and blender.
 # Run blender controlled turtle by typing the following command
 roslaunch ros_assignment blender.launch
+# Then open blender file from terminal by typing the following command
+blender ros_blender.blend
+# NOTE that you are in the nodes directory.
 
 #4. Make the second turtle follow or chase the first one using PID motion.
 # Run chasing turtle simulation by typing the following command

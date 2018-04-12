@@ -16,7 +16,7 @@ def init():
     x = 5.5
     y=5.5
     teta=0
-    msg = '0 0 0'
+    msg = '1 1 0'
     obj = bpy.data.objects["Cube"]
 
     # create a socket object
@@ -31,12 +31,11 @@ def init():
     s.connect((host, port))
 
     # Receive no more than 1024 bytes
-    #msg = s.recv(1024)
+    smsg = s.recv(1024).decode('ascii')
+    print(str(smsg))
 
 
 if __name__ == "__main__":
     init()
     motionreader()
     s.send(msg.encode('ascii'))
-    print('hure')
-
