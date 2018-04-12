@@ -53,11 +53,12 @@ if __name__ == "__main__":
             #parse and partionion message
             vector_str = shlex.split(pose_input)
             x = vector_str[0]
-            y = vector_str[1]
-            teta = vector_str[2]
-            #move turtle using absolute motion
-            turtle1_teleport_absolute(float(x),float(y),float(teta))
+            teta = vector_str[1]
+            #move turtle using relative motion
+            turtle1_teleport_relative(float(x),float(teta))
             print ('vector position is at {}'.format(vector_str))
         clientsocket.close()
 
-    except rospy.ROSInterruptException: pass
+    except rospy.ROSInterruptException:
+        clientsocket.close()
+        pass

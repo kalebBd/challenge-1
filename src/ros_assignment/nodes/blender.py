@@ -1,13 +1,12 @@
 import socket
-import bpy
+import bge
 import sys
 
 def motionreader():
     global x,y,teta,msg
-    x = obj.location.x
-    y = obj.location.y
-    teta = obj.location.z #rotation
-    msg = str(x) + ' ' + str(y) + ' ' + str(teta)
+    x = obj.getLinearVelocity(True).x / 240 # linear
+    teta = obj.getAngularVelocity(True).z / 10 # rotation
+    msg = str(x) + ' ' + str(teta)
     print(msg)
 
 def init():
@@ -16,8 +15,8 @@ def init():
     x = 5.5
     y=5.5
     teta=0
-    msg = '1 1 0'
-    obj = bpy.data.objects["Cube"]
+    msg = '1 0'
+    obj = bge.logic.getCurrentController().owner
 
     # create a socket object
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
