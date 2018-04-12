@@ -1,0 +1,8 @@
+prefix=/home/kaleb/git/rosworkspace/install
+
+Name: ros_assignment
+Description: Description of ros_assignment
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/kaleb/git/rosworkspace/install/lib 
+Requires: 

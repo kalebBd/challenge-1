@@ -1,0 +1,2 @@
+ros_assignment
+-DCATKIN_DEVEL_PREFIX=/home/kaleb/git/rosworkspace/devel -DCMAKE_INSTALL_PREFIX=/home/kaleb/git/rosworkspace/install -G Unix Makefiles

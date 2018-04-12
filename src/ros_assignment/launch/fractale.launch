@@ -1,0 +1,11 @@
+<launch>
+   <!-- Turtlesim Node-->
+   <node pkg="turtlesim" type="turtlesim_node" name="simulation"/>
+   <!--node pkg="ros_assignment" type="fractale.py" name="message_for_turtle" /-->
+
+   <node name="turtle1" pkg="ros_assignment" type="fractale.py" respawn="false" output="screen" >
+     <param name="turtle" type="string" value="turtle1" />
+   </node>
+
+
+ </launch>

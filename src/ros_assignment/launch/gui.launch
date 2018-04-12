@@ -1,0 +1,11 @@
+<launch>
+   <!-- Turtlesim Node-->
+   <node pkg="turtlesim" type="turtlesim_node" name="gui_simulation"/>
+   <node pkg="ros_assignment" type="GUI_controller.py" name="turtlesim" respawn="false" output="screen"/>
+<!--
+   <node name="turtle1_gui" pkg="ros_assignment" type="GUI_controller.py" respawn="false" output="screen" >
+     <param name="turtle" type="string" value="turtle1" />
+   </node>
+-->
+
+ </launch>
