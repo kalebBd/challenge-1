@@ -1,0 +1,8 @@
+prefix=/home/kaleb/git/rosworkspace/devel
+
+Name: opencv_tests
+Description: Description of opencv_tests
+Version: 1.12.7
+Cflags: 
+Libs: -L/home/kaleb/git/rosworkspace/devel/lib 
+Requires: 
