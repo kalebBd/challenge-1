@@ -1,6 +1,0 @@
-<launch>
-   <!-- image Node-->
-   <node pkg="ros_assignment" type="camera.py" name="raw_image" />
-   <node pkg="ros_assignment" type="grayscale.py" name="converted_image" />
-
- </launch>
