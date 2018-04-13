@@ -9,7 +9,7 @@
           ****Solution****
 #1. Capture an image from the webcam and convert it to grayscale.
 # Run image to grayscale converter by typing the following command
-roslaunch ros_assignment image.launch
+roslaunch ros_image image.launch
 
 #2. Create interesting fractals using turtlesim.
 # Run fractale by typing the following command
@@ -38,7 +38,7 @@ rosrun ros_assignment GUI_controller.py
 ***********DETAIL USAGE AFTER LAUNCH************
 ************************************************
           ****Picture Converting****
-1. With in 2 seconds of running image.launch, your picture will be taken by webcam.
+1. With in 2 seconds of running image.launch, your webcam will be active.
 2. Grayscale image will be displayed on the right with webcam image on the left.
           ****Fractale****
 1. After lauching 'fractale.launch', press "CTRL+C" to close or end simulation.
