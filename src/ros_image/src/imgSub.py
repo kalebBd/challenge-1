@@ -9,8 +9,11 @@ import cv2
 def callback(data):
     br= CvBridge()
     rospy.loginfo('receiving image')
-    #cv2.imshow("camera",cv2.cvtColor(br.imgmsg_to_cv2(data), cv2.COLOR_BGR2RGB))
-    cv2.imshow("processed", br.imgmsg_to_cv2(data))
+    cv2.namedWindow('grayscaled', cv2.WINDOW_NORMAL)
+    cv2.imshow("grayscaled",cv2.cvtColor(cv2.cvtColor(br.imgmsg_to_cv2(data), cv2.COLOR_BGR2RGB),cv2.COLOR_RGB2GRAY))
+    #img = cv2.imread( br.imgmsg_to_cv2(data) ,0)
+    cv2.namedWindow('ros_img_message', cv2.WINDOW_NORMAL)
+    cv2.imshow("ros_img_message", br.imgmsg_to_cv2(data))
     cv2.waitKey(1)
 
 def listener():
